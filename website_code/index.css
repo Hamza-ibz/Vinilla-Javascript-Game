@@ -1,0 +1,502 @@
+/*
+for class you use a " . "  
+for id u use a " # "
+use commas , when you want to edit 2 things at a time (li, a)
+"margin:auto" adjusts it to the browser size by distributing the margin equally 
+*/
+
+* { /* targets all elements on page */
+	margin: 0; /* no margin */
+	padding: 0; /* no padding */
+}
+
+body { 
+    background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.6)); /* background colour of the body. linear-gradient is vertical gradient of 2 colours*/
+    margin: 0;  /* removes the margin along the side of the page*/
+}
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0,0,0,0.2)),url("images/banner1.jpg"); /* background image is a banner. used linear-gradient for opacity*/ 
+    padding: 7%; /* size of the banner  */
+    background-size: 100%; /* the percentage of banner that is presented */
+    background-position: center 42%; /* the position of the banner */
+}
+
+ li { /* list of navigation buttons */
+    display: inline-block; /* allows navigation button to be presented horizontaly */
+    background: black; /*background of navigation button is black*/
+    padding-bottom: 10px; /* bottom padding of navigation button (changes size of button)*/
+    padding-top: 10px; /* top padding of navigation button (changes size of button)*/
+    border-radius: 15px; /* how circular the buttons are*/
+    margin-right: 30px; /* space between navigation butttons */
+}
+
+li:hover{
+    background: orange; /* when hovering on the nav button background turns orange*/
+    cursor: pointer; /* when hovered cursor changes to a pointer */
+}
+
+ul {
+    margin: 0;
+    padding:0;    
+}
+
+a {
+    color: white; /* text colour within navigation button */
+    text-decoration: none; /* removes underlining of the text*/
+    padding: 20px; /* padding around the text of navigation buttons*/
+    font-family:Arial, Helvetica, sans-serif; /* font of text within navigation buttons*/
+}
+
+.selected{
+    color:black; /*selected navigation button text is blue*/
+    background-color: orange; /*selected navigation button background colour is red */
+    padding: 10px; /* padding shows the size of the button */
+    padding-left: 20px; 
+    padding-right: 20px;
+    border-radius: 15px; /* how circular the selected button is */
+}
+
+h1{
+    font-family:Marker Felt, fantasy; /* font of the page title (h1)*/
+    color:red;  /* colour of the text */
+    position: absolute; /* the header is positioned "absolutely" to its first positioned parent. ("left" and "bottom" shows the position) */
+    left: 50%;
+    bottom: 60%; /* posiotion of the header vertically (to the top)*/
+    transform: translateX(-50%); /* posiotion the header to the center (horizontaly)*/
+    font-size: 350%;    /* size of the font*/
+}
+
+.image-boarder-rightside {
+    background:black; /* the boarder of the images (along the right side) is black */
+    padding: 4px 4px 0 4px; /* padding of the boarder */
+    width: 6.6%; /* width of the boarder*/
+    float: right; /* position the boarder to the right side of the screen */
+}
+.image-boarder-leftside {
+    background:black;   /* the boarder of the images along the left side is black */
+    padding: 4px 4px 0 4px;  /* padding of the boarder */
+    width: 6.6%; /* width of the boarder*/
+}
+
+footer {
+    background: rgb(61, 61, 61); /* colour of footer*/
+}
+
+.pics{
+    width: 100%; /* width of images along left and right side*/
+    height: 100%; /* height of images along left and right side*/
+    opacity: 0.7; /* visibility of image */
+}
+
+header .logo a{ /* css of the header , logo and the navigation buttons */
+    background-image: url("images/onepiecelogo.jpg"); /* logo within banner*/
+    background-size: 100%; /* logo size */
+    background-repeat: no-repeat; /* prevents the repetition of the logo */
+    display: block; /* Displays the element as a block element. It starts on a new line, and takes up the whole width*/
+    margin-left: auto; /* centers the logo */
+    margin-right: auto; /* centers the logo */
+    width: 300px; /* the width of the header and logo */
+    height: 110px; /* the height of the header and logo */
+    text-indent: -17500px; /* text for the logo is hidden since it is placed out of the screen */
+}
+
+nav {
+    position: absolute; /* position of navigation bar */
+    left: 0px; /* position the entire navigation bar to the centre */
+    bottom: 75%; /* position the entire navigation bar to the top of the page */
+    width: 100%; /* percentage of navigation the is shown */
+    display: flex; /* Displays navigation bar as a block-level flex container */
+    justify-content: center; /* presents navigation bar in the center */
+}
+
+.content{ /* content for home, login and rank pages */
+    position: absolute; /* position of the image (using "left" and "bottom") */
+    left: 26%;
+    bottom: -50%;
+    width: 50%; /* width of image */
+    height: 100%; /* height of image */
+    
+}
+
+.game_content{ /* content for the game page  */
+    position: absolute; /* position of the image (using "left" and "bottom") */
+    left: 38%;
+    bottom: 5%;
+    width: 25%; /* width of image */
+    height: 50%; /* height of image */
+}
+
+.form-box{
+    width: 60%;
+    position: absolute;
+    margin-left: -30.5%;
+    margin-top: 8%;
+    left: 50%;
+    background: darkgrey;
+    padding: 30% 10px;
+    border-radius: 10px;
+    overflow: hidden;   /*this hides the form when u slide fron login to register */
+    bottom: -60%;
+
+}
+
+.button-box{
+    position: absolute;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: -40%;
+    box-shadow: 0 0 20px 9px tomato;
+    border-radius: 30px;
+    background: black;    
+}
+
+.toggle-btn{
+    padding: 8% 12%;
+    margin-left: -25%;
+    margin-right: 40%;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+     outline: none;
+}
+
+#btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left top, red, black);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input-group{
+   top: 30%;
+   position: absolute;
+   width:90% ;
+   transition: .5s
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0 ;
+    margin: 10px 0;
+    border-left: 0;
+    border-right:0 ;
+    border-top: 0;
+    border-bottom: 2px solid black;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn{
+    width: 30%;
+    padding: 20px 5px; /* size of the submit button*/
+    cursor: pointer;
+    display: block;
+    margin: -15% -1%; /* position of the button*/
+    border: 0;
+    outline: none;
+    border-radius: 20px;
+    background: linear-gradient(to left top, red, black);
+    color: whitesmoke;
+   
+}
+
+#login{
+    left: 5%;
+}
+
+#register{
+    left: 200%;
+}
+
+#logout{
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to left top, red, black);
+    position: absolute;
+    top:28%;
+    left:80%;
+    height: 10%;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.blank
+{
+    background-color: black;
+    border           : 3px solid #a50008;
+    width            : 800px;
+    height           : 600px;
+    position         : absolute;
+    top              : 90%;
+    left             : 50%;
+    transform        : translate(-50%, -50%);
+}
+
+.EASY
+{
+    font-size     : 30px;
+    position      : absolute;
+    bottom        : 70%;
+    left          : 50%;
+    transform     : translate(-50%, 0);
+    background    : #696969;
+    color         : white;
+    padding       : 30px 70px;
+    border-radius : 10px;
+    z-index       : 200;
+    cursor        : pointer;
+}
+
+.MEDIUM
+{
+    font-size     : 30px;
+    position      : absolute;
+    bottom        : 40%;
+    left          : 50%;
+    transform     : translate(-50%, 0);
+    background    : #696969;
+    color         : white;
+    padding       : 30px 70px;
+    border-radius : 10px;
+    z-index       : 200;
+    cursor        : pointer;
+}
+
+.HARD
+{
+    font-size     : 30px;
+    position      : absolute;
+    bottom        : 10%;
+    left          : 50%;
+    transform     : translate(-50%, 0);
+    background    : #696969;
+    color         : white;
+    padding       : 30px 70px;
+    border-radius : 10px;
+    z-index       : 200;
+   cursor: pointer;
+}
+
+.wrapper
+{
+    display: none;
+    border           : 3px solid #a50008;
+    width            : 800px;
+    height           : 600px;
+    position         : absolute;
+    top              : 90%;
+    left             : 50%;
+    transform        : translate(-50%, -50%);
+    background-image : url('images/field.jpg');
+    background-position: 90%;
+    background-size: 170%;
+    background-repeat: no-repeat;
+    /* overflow         : hidden; */
+}
+
+/*SCORE*/
+.score
+{
+    font-size  : 100px;
+    color      : #ca1f1f;
+    position   : absolute;
+    top        : 5%;
+    left       : -5%;
+    /* transform  : translate(-10%, -70%); */
+    width      : 200px;
+    height     : 100px;
+    text-align : center;
+}
+
+.highscore
+{
+color: white;
+position: absolute;
+left: 70%;
+top: 6%;
+font-size: 25px;
+font-weight: bold; /* makes text bold*/
+background-color: brown;
+padding: 10px 15px;
+border-radius: 200px;
+
+}
+
+/*COUNTDOWN TIMER*/
+.countdown
+{
+    position    : absolute;
+    top         : 485px;
+    width       : 100%;
+    font-size   : 20px;
+    font-weight : bold;
+    text-align  : center;
+    color       : #ffffff;
+
+}
+
+/*PLAY BUTTON*/
+button     /* all buttons based on this format*/
+{
+    font-size     : 20px;
+    position      : absolute;
+    bottom        : 10px;
+    left          : 50%;
+    transform     : translate(-50%, 0);
+    padding       : 20px 50px;
+    z-index       : 200;
+}
+
+.playButton
+{
+    font-size     : 20px;
+    position      : absolute;
+    bottom        : 10px;
+    left          : 50%;
+    transform     : translate(-50%, 0);
+    background    : #696969;
+    color         : white;
+    padding       : 20px 50px;
+    border-radius : 10px;
+    z-index       : 200;
+    cursor        : pointer;
+}
+
+.changemodes
+{
+    font-size     : 20px;
+    position      : absolute;
+    bottom        : 10px;
+    left          : 20%;
+    transform     : translate(-50%, 0);
+    background    : #696969;
+    color         : white;
+    padding       : 10px 25px;
+    border-radius : 10px;
+    z-index       : 200;
+    cursor        : pointer;
+}
+
+/*INPUT AREA ON THE GAME CANVAS.*/
+.game
+{
+   
+    width     : 600px;
+    height    : 400px;
+    margin    : 70px auto;
+    z-index   : 200;
+    display   : flex;
+    flex-wrap : wrap;
+}
+
+/*AREA FROM WHICH THE ALIENS WILL POP OUT FROM.*/
+.hole
+{
+    
+    flex     : 1 0 32.59%;
+    position : relative;
+    overflow : hidden;
+}
+
+/*POSITIONING OF CHEST ELEMENTS. ALIENS WILL POP OUT FROM BEHIND THEM.*/
+.hole:after
+{
+    pointer-events   : none;
+    content          : '';
+    display          : block;
+    background-image : url('images/hole.jpg');
+    position         : absolute;
+    width            : 100%;
+    height           : 70px;
+    z-index          : 2;
+    bottom           : -1px;
+    background-size  : 90%;
+    background-repeat: no-repeat;
+}
+
+/*POSITIONING OF THE ALIEN SPRITE.*/
+.mole
+{
+    background-image    : url('images/mole.jpg');
+    position            : absolute;
+    top                 : 100%; /* 100% is where the character is fully hidden and 0 is where the character is fully shown.*/
+    width               : 100%;
+    height              : 160%;
+    transition          : 0.4s; /*this is the time for character to animate out of the hole* it effects the top element*/
+    background-repeat   : no-repeat;
+    background-position : bottom;
+    
+}
+
+/*SIZE OF ALIENS IN THE BACKGROUND.*/
+.mole.small
+{
+    background-size : 70%;
+}
+
+/*SIZE OF ALIENS IN THE FOREGROUND.*/
+.mole.large
+{
+    background-size : 77%;
+}
+
+.molebad
+{
+    background-image : url('images/brook.jpg');
+    background-size : 70%;
+    position            : absolute;
+    top                 : 100%; /* 100% is where the character is fully hidden and 0 is where the character is fully shown.*/
+    width               : 100%;
+    height              : 120%;
+    transition          : 0.4s; /*this is the time for character to animate out of the hole* it effects the top element*/
+    background-repeat   : no-repeat;
+    background-position : bottom;
+}
+
+/*THIS MAKES THE ALIEN PEEK OUT FROM THE CHESTS.*/
+.hole.up .mole /* here its saying if "hole" has the class "up" ".mole" "top" goes to 0*/
+{
+    top : 0;
+}
+
+.hole.ups .molebad  
+{
+    top : 0;
+}
+
+#ranking{
+    position         : absolute;
+    top              : 70%;
+    left             : 50%;
+    transform        : translate(-50%, -50%);
+    font-size: 200%;
+    font-weight: bold;
+    border           : 5px solid red;
+    padding: 50px;
+    background-color: black;
+        
+    }
+
+ol{
+    color: white;
+    padding: 10px;
+
+    }
+
+#about
+{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: orange;
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
